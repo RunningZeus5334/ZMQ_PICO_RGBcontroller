@@ -14,12 +14,14 @@ In this repo i've made a code on QT(creator) that uses the ZeroMQ library to pub
 ### Tutorial video
 (coming soong) expected april 2nd-14th 
 ### Update/Patches 
+- V0.1 Alpha release. Basic service that responds to a color.
 
 ### Future updates 
 Here are some planned updates for my current service and repository. 
 
 - PWM controlled RGB
 - More stable code
+- Portable code
 - Cleaner repository
 - UI for conection and controlling RGB's
 - Tutorial video on how to run on LAN for smart home services. 
