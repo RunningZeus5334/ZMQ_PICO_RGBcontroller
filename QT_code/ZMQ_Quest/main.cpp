@@ -25,21 +25,6 @@ int main( void )
     {
 
 
-
-
-        //zmq::socket_t subscriber( context, ZMQ_SUB );
-
-
-        //ventilator.connect( "tcp://benternet.pxl-ea-ict.be:24041" );
-        //subscriber.connect( "tcp://benternet.pxl-ea-ict.be:24042" );
-
-        //subscriber.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Red", 26 );
-
-        //zmq::message_t * msg = new zmq::message_t();
-        std::string message;
-
-        //ventilator.connected();
-
         std::thread first (recv_red);
         std::thread second (recv_green);
         std::thread third (recv_blue);
@@ -48,71 +33,7 @@ int main( void )
         first.join();
         second.join();
         third.join();
-       /* while( subscriber.connected() ){
-            std::cout << "TEST" << std::endl;
-            subscriber.recv( msg );
-            message = std::string( (char*) msg->data(), msg->size() );
-            if(msg != nullptr){
-                std::cout << "Received : [" << std::string( (char*) msg->data(), msg->size() ) << "]" << std::endl;
-                ventilator.send( "RGB_Controller!>Color changed to red", 37 );
-            }
 
-            if(message == "RGB_Controller?>Color>Red"){
-                Controller.change_red();
-                ventilator.send( "RGB_Controller!>Color changed to red", 37 );
-
-            }
-            else if (message == "RGB_Controller?>Color>Green") {
-                 Controller.change_green();
-                ventilator.send( "RGB_Controller!>Color changed to green", 39 );
-
-            }
-            else if (message == "RGB_Controller?>Color>Blue") {
-                 Controller.change_blue();
-                ventilator.send( "RGB_Controller>Color changed to blue", 38 );
-
-            }
-        }*/
-
-       /* while( subscriber.connected() ){
-
-            subscriber.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Red", 26 );
-            subscriber.recv( msg );
-            if(msg != nullptr){
-                std::cout << "Received : [" << std::string( (char*) msg->data(), msg->size() ) << "]" << std::endl;
-                ventilator.send( "RGB_Controller!>Color changed to red", 37 );
-                Controller.change_red();
-            }
-
-            subscriber.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Green", 28 );
-            subscriber.recv( msg );
-            if(msg != nullptr){
-                std::cout << "Received : [" << std::string( (char*) msg->data(), msg->size() ) << "]" << std::endl;
-                ventilator.send( "RGB_Controller!>Color changed to green", 39 );
-                Controller.change_green();
-            }
-
-            subscriber.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Blue", 27 );
-            subscriber.recv( msg );
-            if(msg != nullptr){
-                std::cout << "Received : [" << std::string( (char*) msg->data(), msg->size() ) << "]" << std::endl;
-                ventilator.send( "RGB_Controller!>Color changed to blue", 38 );
-                Controller.change_blue();
-            }
-        }*/
-
-
-        /*ventilator.connected();
-        sleep( 1000 );
-        ventilator.send( "example>quest?>Slave Master Thomas Fokkema>", 44 );
-        std::cout << "example>quest?>Slave Master Thomas Fokkema>" << std::endl;
-
-        subscriber.connected();
-
-        subscriber.recv( msg );
-
-        std::cout << "Received : [" << std::string( (char*) msg->data(), msg->size() ) << "]" << std::endl;
-        */
 
 
     }
