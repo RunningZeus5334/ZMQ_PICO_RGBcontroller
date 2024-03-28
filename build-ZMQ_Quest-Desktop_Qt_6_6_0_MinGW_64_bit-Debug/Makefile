@@ -352,6 +352,7 @@ Makefile: ../ZMQ_Quest/ZMQ_Quest.pro F:/Qt/6.6.0/mingw_64/mkspecs/win32-g++/qmak
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/qt_config.prf \
 		F:/Qt/6.6.0/mingw_64/mkspecs/win32-g++/qmake.conf \
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/exclusive_builds.prf \
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/toolchain.prf \
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/default_pre.prf \
@@ -371,7 +372,6 @@ Makefile: ../ZMQ_Quest/ZMQ_Quest.pro F:/Qt/6.6.0/mingw_64/mkspecs/win32-g++/qmak
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/yacc.prf \
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/lex.prf \
 		../ZMQ_Quest/ZMQ_Quest.pro \
-		.qmake.stash \
 		F:/Qt/6.6.0/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\ZMQ_Quest\ZMQ_Quest.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 F:/Qt/6.6.0/mingw_64/mkspecs/features/spec_pre.prf:
@@ -656,6 +656,7 @@ F:/Qt/6.6.0/mingw_64/mkspecs/features/qt_functions.prf:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/qt_config.prf:
 F:/Qt/6.6.0/mingw_64/mkspecs/win32-g++/qmake.conf:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/exclusive_builds.prf:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/toolchain.prf:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/default_pre.prf:
@@ -675,7 +676,6 @@ F:/Qt/6.6.0/mingw_64/mkspecs/features/exceptions.prf:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/yacc.prf:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/lex.prf:
 ../ZMQ_Quest/ZMQ_Quest.pro:
-.qmake.stash:
 F:/Qt/6.6.0/mingw_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\ZMQ_Quest\ZMQ_Quest.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
