@@ -1,6 +1,6 @@
 # ZMQ RBG Controller with RPI pico W
 
-In this repo i've made a code on QT(creator) that uses the ZeroMQ library to publish a service. This service can be called and then u can change the RGB led on the RPI pico. 
+In this repository, I have developed a code in QT Creator, which uses the ZeroMQ library to make a publish-subscribe service. This service enables users to remotely manipulate the RGB LED on the Raspberry Pi Pico microcontroller.
 
 ## Content table
 - coming soon) How to start guide
@@ -10,9 +10,9 @@ In this repo i've made a code on QT(creator) that uses the ZeroMQ library to pub
 
 
 ###  How to start guide
-(coming soong) expected april 2nd-14th 
+(coming soon)
 ### Tutorial video
-(coming soong) expected april 2nd-14th 
+(coming soon)
 ### Update/Patches 
 - V0.1 Alpha release. Basic service that responds to a color.
 
