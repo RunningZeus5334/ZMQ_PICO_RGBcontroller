@@ -5,6 +5,7 @@ In this repository, I have developed a code in QT Creator, which uses the ZeroMQ
 ## Content table
 - coming soon) How to start guide
 - (coming soon) Tutorial video
+- API manual
 - Update/Patches 
 - Future updates 
 
@@ -13,6 +14,11 @@ In this repository, I have developed a code in QT Creator, which uses the ZeroMQ
 (coming soon)
 ### Tutorial video
 (coming soon)
+
+### API manual
+communucation miro
+queries duideljik vermeld
+
 ### Update/Patches 
 - V0.1 Alpha release. Basic service that responds to a color.
 
@@ -24,4 +30,5 @@ Here are some planned updates for my current service and repository.
 - Portable code
 - Cleaner repository
 - UI for conection and controlling RGB's
-- Tutorial video on how to run on LAN for smart home services. 
+- Tutorial video on how to run on LAN for smart home services.
+- Running ZMQ service on pico if possible
