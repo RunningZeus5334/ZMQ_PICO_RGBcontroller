@@ -4,7 +4,7 @@ In this repository, I have developed a code in QT Creator, which uses the ZeroMQ
 
 ## Content table
 - [How to start guide](#how-to-start-guide)
-- [How to Build](#how-to-build)
+- [How to build guide](#how-to-build-guide)
 - [Tutorial video](#tutorial-video)
 - [API manual](#api-manual)
 - [Update/Patches](#updatepatches) 
@@ -17,11 +17,11 @@ In this repository, I have developed a code in QT Creator, which uses the ZeroMQ
 3. pull the code from github and open the .pro file in Client side folder
 4. press play and it should work 
 
-## How to build 
+## How to build guide
 For building your own code that communicates with the service u need the ZMQ library.
 Option 1: use the library included in this repo
 1. copy the include and lib folder to the same place as your qt project folder is.
-2. in the .pro file add these lines.\
+2. in the .pro file add these lines.
 ```
 DEFINES += ZMQ_STATIC
 LIBS += -L$$PWD/../lib -lzmq -lws2_32 -lIphlpapi
