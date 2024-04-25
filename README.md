@@ -115,3 +115,6 @@ Here are some planned updates for my current service and repository:
 - UI for conection and controlling RGB's
 - Tutorial video on how to run on LAN for smart home services.
 - Running ZMQ service on pico if possible
+
+## Comments 
+Clear explanation about different services. Also what if i want to change more than 1 led at a time. gotta think about it. wat if we want to change all the leds once. or turn them all off. how about the other services. is that another pico? or is it the same pico. the server is a translator for tcp communication.  
