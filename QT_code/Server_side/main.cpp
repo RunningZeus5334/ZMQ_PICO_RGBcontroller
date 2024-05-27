@@ -2,6 +2,7 @@
 #include <zmq.hpp>
 #include <thread>
 #include "rgb_control.h"
+#include "pico.h"
 #ifndef _WIN32
 #include <unistd.h>
 #else
@@ -25,17 +26,13 @@ int main( void )
     {
 
 
-        std::thread first (recv_red);
-        std::thread second (recv_green);
-        std::thread third (recv_blue);
+        //std::thread third (recv_blue);
 
+        //third.join();
+        char thrd = 1;
 
-        first.join();
-        second.join();
-        third.join();
-
-
-
+        Pico Pico1(thrd);
+        Pico1::Colerchange();
     }
     catch( zmq::error_t & ex )
     {
@@ -45,67 +42,6 @@ int main( void )
     return 0;
 }
 
-
-
-
-
-    void recv_red()
-    {
-
-        std::cout << "TEST_red" << std::endl;
-
-        zmq::socket_t subscriber_red( context, ZMQ_SUB );
-        zmq::socket_t ventilator_red( context, ZMQ_PUSH );
-
-        subscriber_red.connect( "tcp://benternet.pxl-ea-ict.be:24042" );
-        ventilator_red.connect( "tcp://benternet.pxl-ea-ict.be:24041" );
-
-        subscriber_red.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Red", 26 );
-        ventilator_red.connected();
-
-        zmq::message_t * msgr = new zmq::message_t();
-
-        while( subscriber_red.connected() ){
-
-            subscriber_red.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Red", 26 );
-            subscriber_red.recv( msgr );
-
-            std::cout << "Received : [" << std::string( (char*) msgr->data(), msgr->size() ) << "]" << std::endl;
-            ventilator_red.send( "RGB_Controller!>Color changed to red", 37 );
-            Controller.change_red();
-
-
-        }
-    }
-
-    void recv_green()
-    {
-
-        std::cout << "TEST_green" << std::endl;
-
-        zmq::socket_t subscriber_green( context, ZMQ_SUB );
-        zmq::socket_t ventilator_green( context, ZMQ_PUSH );
-
-        subscriber_green.connect( "tcp://benternet.pxl-ea-ict.be:24042" );
-        ventilator_green.connect( "tcp://benternet.pxl-ea-ict.be:24041" );
-
-        subscriber_green.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Green", 28 );
-        ventilator_green.connected();
-
-        zmq::message_t * msgg = new zmq::message_t();
-
-        while( subscriber_green.connected() ){
-
-            subscriber_green.setsockopt( ZMQ_SUBSCRIBE,  "RGB_Controller?>Color>Green", 28 );
-            subscriber_green.recv( msgg );
-
-            std::cout << "Received : [" << std::string( (char*) msgg->data(), msgg->size() ) << "]" << std::endl;
-            ventilator_green.send( "RGB_Controller!>Color changed to green", 38 );
-            Controller.change_green();
-
-
-        }
-    }
 
     void recv_blue()
     {
