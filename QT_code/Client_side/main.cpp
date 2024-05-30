@@ -26,29 +26,24 @@ int main( void )
 
 		while( ventilator.connected() )
 		{
-            sleep( 5000);
-            ventilator.send( "RGB_Controller?>Color>Red", 26 );
-            std::cout << "Pushed : [RGB_Controller?>Color>Red]" << std::endl;
 
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Color>Green", 28 );
-            std::cout << "Pushed : [RGB_Controller?>Color>Green]" << std::endl;
-
+            ventilator.send( "RGB_Controller?>Pico1>Led1>r 2 g 180 b 255", 44 );
+            std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Color>Blue", 27 );
+            ventilator.send( "RGB_Controller?>Pico2>Led1>r 255 g 10 b 5", 44 );
+            std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
+            sleep( 5000);
+            ventilator.send( "RGB_Controller?>Pico3>Led1>r 60 g 255 b 90", 44 );
+            std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
+            /*
+            sleep( 5000);
+            ventilator.send( "RGB_Controller?>Pico1>Led1>r 120 g 150 b 10", 44 );
             std::cout << "Pushed : [RGB_Controller?>Color>Blue]" << std::endl;
-
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Color>Green", 28 );
-            std::cout << "Pushed : [RGB_Controller?>Color>Green]" << std::endl;
+            ventilator.send( "RGB_Controller?>Pico1>Led1>r 120 g 150 b 10", 44 );
+            std::cout << "Pushed : [RGB_Controller?>Color>Blue]" << std::endl;*/
 
-            sleep( 5000);
-            ventilator.send( "RGB_Controller?>Color>Blue", 27 );
-            std::cout << "Pushed : [RGB_Controller?>Color>Blue]" << std::endl;
-
-            sleep( 5000);
-            ventilator.send( "RGB_Controller?>Color>Red", 26 );
-            std::cout << "Pushed : [RGB_Controller?>Color>Red]" << std::endl;
                     }
 	}
 	catch( zmq::error_t & ex )
@@ -56,5 +51,5 @@ int main( void )
 		std::cerr << "Caught an exception : " << ex.what();
 	}
 
-	return 0;
+    return 0;
 }

@@ -87,12 +87,12 @@ Led 2: ``RGB_Controller?>Pico1>Led2``\
 Led 3: ``RGB_Controller?>Pico1>Led3``
 
 And after that we can push the color code we want to change to. this ranges between 0..255 for RGB.\
-example: ``RGB_Controller?>Pico1>Led1>255,15,105``
+example: ``RGB_Controller?>Pico1>Led1>r=255 g=15 b=105``
 
 After the Led is changen we can recieve a response that the led has changed or that the pico is not responding.\
 Subscribe to: ``RGB_Controller!>Pico1``
 
-Example recieve: ``RGB_Controller!>Pico2>changedto:255,15,105``\
+Example recieve: ``RGB_Controller!>Pico2>changedto:r=255 g=15 b=105``\
 or for example: ``RGB_Controller!>Pico3>could_not_respond``
 ![server side](https://github.com/RunningZeus5334/ZMQ_PICO_RGBcontroller/blob/main/resources/Schermafbeelding%202024-04-24%20223647.png)
 This is what the server does in the background. and how communication goes for the server. 
