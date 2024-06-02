@@ -14,11 +14,9 @@ LIBS += -L$$PWD/../lib -lzmq -lws2_32 -lIphlpapi
 INCLUDEPATH += $$PWD/../include
 
 SOURCES += main.cpp \
-    pico.cpp \
-    tcpclient.cpp
+    pico.cpp
 
 HEADERS += \
-    pico.h \
-    tcpclient.h
+    pico.h
 
 

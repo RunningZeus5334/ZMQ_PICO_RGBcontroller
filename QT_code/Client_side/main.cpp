@@ -31,18 +31,20 @@ int main( void )
             ventilator.send( "RGB_Controller?>Pico1>Led1>r 2 g 180 b 255", 44 );
             std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Pico2>Led1>r 255 g 10 b 5", 44 );
+            ventilator.send( "RGB_Controller?>Pico1>Led2>r 255 g 10 b 5", 44 );
             std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Pico3>Led1>r 60 g 255 b 90", 44 );
+            ventilator.send( "RGB_Controller?>Pico1>Led3>r 60 g 255 b 90", 44 );
             std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
-            /*
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Pico1>Led1>r 120 g 150 b 10", 44 );
-            std::cout << "Pushed : [RGB_Controller?>Color>Blue]" << std::endl;
+            ventilator.send( "RGB_Controller?>Pico1>Led1>r 255 g 50 b 0", 44 );
+            std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Pico1>Led1>r 120 g 150 b 10", 44 );
-            std::cout << "Pushed : [RGB_Controller?>Color>Blue]" << std::endl;*/
+            ventilator.send( "RGB_Controller?>Pico1>Led2>r 0 g 90 b 150", 44 );
+            std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
+            sleep( 5000);
+            ventilator.send( "RGB_Controller?>Pico1>Led3>r 160 g 0 b 255", 44 );
+            std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
 
                     }
 	}
