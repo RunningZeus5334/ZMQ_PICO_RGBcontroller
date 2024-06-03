@@ -28,13 +28,13 @@ int main( void )
 		{
 
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Pico1>Led1>r 2 g 180 b 255", 44 );
+            ventilator.send( "RGB_Controller?>Pico1>Leds>r 2 g 180 b 255", 44 );
             std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Pico1>Led2>r 255 g 10 b 5", 44 );
+            ventilator.send( "RGB_Controller?>Pico1>Leds>r 255 g 10 b 5", 44 );
             std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
             sleep( 5000);
-            ventilator.send( "RGB_Controller?>Pico1>Led3>r 60 g 255 b 90", 44 );
+            ventilator.send( "RGB_Controller?>Pico1>Leds>r 60 g 255 b 90", 44 );
             std::cout << "Pushed : [RGB_Controller?>Color" << std::endl;
             sleep( 5000);
             ventilator.send( "RGB_Controller?>Pico1>Led1>r 255 g 50 b 0", 44 );
